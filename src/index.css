@@ -1,0 +1,79 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+.status {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #fff;
+  border: 2px solid #555;
+  font-size: 48px;  
+  font-weight: bold;
+  height: 80px;     
+  width: 80px;       
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  line-height: 70px;
+  color: #333; 
+}
+
+.board-row:first-child .square { border-top: none; }
+.board-row:last-child .square { border-bottom: none; }
+.board-row .square:first-child { border-left: none; }
+.board-row .square:last-child { border-right: none; }
+
+.square:hover {
+  background-color: #e9e9e9;
+}
+
+.square.winning {
+  background-color: #4CAF50 !important; 
+  color: white; 
+  transform: scale(1.05);
+} 
+
+.reset-button {
+  margin-top: 25px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}
